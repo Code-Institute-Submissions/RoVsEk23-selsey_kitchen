@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h3 class="light-blue-text text-darken-4 center-align">ALL RECIPES</h3>
+
 <ul class="collapsible popout">
     {% for recipe in recipes %}
     <li>
@@ -11,6 +13,7 @@
         <div class="collapsible-body">
             <p>INGREDIENTS: {{ recipe.recipe_ingredients }}</p>
             <p>METHOD: {{ recipe.recipe_description }}</p>
+            <p><b>by: {{ recipe.created_by }}</b></p>
         </div>
     </li>
     {% endfor %}
