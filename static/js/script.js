@@ -7,4 +7,5 @@ $(document).ready(function () {
         edge: "right"
     });
     $(".collapsible").collapsible();
+    $("select").formSelect();
 });
