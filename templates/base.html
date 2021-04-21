@@ -105,11 +105,14 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-                © 2021 Copyright Text
                 <a class="grey-text text-lighten-4 right" href="#!">Phone: 07938027761</a>
+                <p class="copyright text-muted">Copyright &copy; Developed by RK <span id="copyright"></span></p>
             </div>
         </div>
     </footer>
 </footer>
+<script>
+    $("#copyright").text(new Date().getFullYear());
+</script>
 
 </html>
