@@ -37,13 +37,10 @@
                 <div id="modal1-{{recipe._id}}" class="modal">
                     <div class="modal-content light-blue darken-4 text-shadow">
                         <h4>Are you sure?</h4>
-                        <p>This recipe will be permanently deleted!</p>
-                        <p>Click anywhere outside box to cancel</p>
                     </div>
                     <div class="modal-footer light-blue darken-4 text-shadow">
                         <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                            class="modal-close waves-effect white-text waves-green btn orange">Agree and
-                            Delete!</a>
+                            class="modal-close waves-effect white-text waves-green btn orange">Yes, Delete!</a>
                     </div>
                 </div>
                 <a href="{{ url_for('update_recipe', recipe_id=recipe._id) }}"

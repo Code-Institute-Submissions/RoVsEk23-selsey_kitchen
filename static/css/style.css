@@ -14,3 +14,8 @@
     margin: 5px;
     line-height: 42px;
 }
+
+.modal {
+    width: 25% !important;
+    height: 16% !important;
+}
