@@ -9,6 +9,8 @@ $(document).ready(function () {
     $(".collapsible").collapsible();
     $("select").formSelect();
     $('.modal').modal();
+    $('.carousel').carousel();
+
 
     // Custom Materialize select validation
 
