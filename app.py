@@ -191,6 +191,46 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+@app.route("/get_tools")
+def get_tools():
+    tools = list(mongo.db.tools.find().sort("tools_name", 1))
+    return render_template("tools.html", tools=tools)
+
+
+@app.route("/add_tools", methods=["GET", "POST"])
+def add_tools():
+    if request.method == "POST":
+        tools = {
+            "tools_name": request.form.get("tools_name")
+        }
+        mongo.db.tools.insert_one(tools)
+        flash("New Item Added!")
+        return redirect(url_for("get_tools"))
+
+    return render_template("add_tools.html")
+
+
+@app.route("/edit_tools/<tools_id>", methods=["GET", "POST"])
+def edit_tools(tools_id):
+    if request.method == "POST":
+        submit = {
+            "tools_name": request.form.get("tools_name")
+        }
+        mongo.db.tools.update({"_id": ObjectId(tools_id)}, submit)
+        flash("Item Successfully Updated!")
+        return redirect(url_for("get_tools"))
+
+    tools = mongo.db.tools.find_one({"_id": ObjectId(tools_id)})
+    return render_template("edit_tools.html", tools=tools)
+
+
+@app.route("/delete_tools/<tools_id>")
+def delete_tools(tools_id):
+    mongo.db.tools.remove({"_id": ObjectId(tools_id)})
+    flash("Item Successfully Deleted!")
+    return redirect(url_for("get_tools"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
