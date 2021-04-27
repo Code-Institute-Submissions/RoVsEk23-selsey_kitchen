@@ -19,3 +19,7 @@
     width: 25% !important;
     height: 16% !important;
 }
+
+.carousel .carousel-item {
+    width: 300px !important;
+}
