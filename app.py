@@ -104,7 +104,8 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+    recipes = list(mongo.db.recipes.find())
+    return render_template("profile.html", username=username, recipes=recipes)
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])

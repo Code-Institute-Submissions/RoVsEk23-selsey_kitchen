@@ -11,4 +11,41 @@
     </div>
 </div>
 
+<h3 class="light-blue-text text-darken-4 center-align">MY RECIPES</h3>
+
+<ul class="collapsible popout">
+    {% for recipe in recipes %}
+    <li>
+        {% if session.user|lower == recipe.created_by|lower %}
+        <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+            <div class="col s9">
+                <i class="fas fa-caret-down"></i>
+                <strong>{{ recipe.category_name }}</strong> : {{ recipe.recipe_title }}
+            </div>
+            <div class="col s3">
+                <i class="fas fa-caret-down"></i>
+                <a href="#modal1-{{recipe._id}}" class="btn-small green accent-4 modal-trigger">Remove</a>
+                <div id="modal1-{{recipe._id}}" class="modal">
+                    <div class="modal-content light-blue darken-4 text-shadow">
+                        <h4>Are you sure?</h4>
+                    </div>
+                    <div class="modal-footer light-blue darken-4 text-shadow">
+                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                            class="modal-close waves-effect white-text waves-green btn orange">Yes, Delete!</a>
+                    </div>
+                </div>
+                <a href="{{ url_for('update_recipe', recipe_id=recipe._id) }}"
+                    class="btn-small light-blue lighten-1">Update</a>
+            </div>
+        </div>
+        <div class="collapsible-body">
+            <p>INGREDIENTS: {{ recipe.recipe_ingredients }}</p>
+            <p>METHOD: {{ recipe.recipe_description }}</p>
+            <p><b>by: {{ recipe.created_by }}</b></p>
+        </div>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
