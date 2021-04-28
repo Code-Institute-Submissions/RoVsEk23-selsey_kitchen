@@ -23,3 +23,13 @@
 .carousel .carousel-item {
     width: 300px !important;
 }
+
+#recipe-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+    max-width: 100%;
+    overflow: hidden;
+    height: auto;
+}
