@@ -1,19 +1,31 @@
 import os
+import boto3
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for, send_from_directory)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.utils import secure_filename
 if os.path.exists("env.py"):
     import env
 
+UPLOAD_FOLDER = './static/images'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+S3_BUCKET_NAME = os.environ.get("S3_BUCKET_NAME")
+S3_KEY = os.environ.get("S3_KEY")
+S3_SECRET = os.environ.get("S3_SECRET")
+S3_LOCATION = os.environ.get("S3_LOCATION")
 
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+s3 = boto3.client("s3", aws_access_key_id=S3_KEY,
+                  aws_secret_access_key=S3_SECRET)
 
 mongo = PyMongo(app)
 
@@ -35,6 +47,13 @@ def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
+
+
+@app.route("/search_profile", methods=["GET", "POST"])
+def search_profile():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template("profile.html", recipes=recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -111,11 +130,13 @@ def profile(username):
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
+        image_path = upload_file()
         recipe = {
             "category_name": request.form.get("category_name"),
             "recipe_title": request.form.get("recipe_title"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_description": request.form.get("recipe_description"),
+            "file": image_path,
             "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
@@ -126,14 +147,51 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+def upload_file():
+    path = url_for('static', filename='images/placeholder.png')
+    # Placeholder used if user does not upload a file
+    if 'file' not in request.files:
+        return path
+    file = request.files['file']
+    if file.filename == '':
+        return path
+    if file and allowed_file(file.filename):
+        file.filename = secure_filename(file.filename)
+        path = upload_file_to_s3(file)
+    return path
+
+
+def upload_file_to_s3(file):
+    """
+    Amazon S3 Photo Bucket Configuration:
+    Docs: http://boto3.readthedocs.io/en/latest/guide/s3.html
+    """
+    try:
+        s3.upload_fileobj(file, S3_BUCKET_NAME, file.filename, ExtraArgs={
+                          "ACL": "public-read", "ContentType":
+                          file.content_type})
+    except Exception as e:
+        print("Something Happened: ", e)
+        return e
+
+    return "{}{}".format(S3_LOCATION, file.filename)
+
+
 @app.route("/update_recipe/<recipe_id>", methods=["GET", "POST"])
 def update_recipe(recipe_id):
+    update_path = upload_file()
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name"),
             "recipe_title": request.form.get("recipe_title"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_description": request.form.get("recipe_description"),
+            "file": update_path,
             "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
@@ -190,46 +248,6 @@ def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted!")
     return redirect(url_for("get_categories"))
-
-
-@app.route("/get_tools")
-def get_tools():
-    tools = list(mongo.db.tools.find().sort("tools_name", 1))
-    return render_template("tools.html", tools=tools)
-
-
-@app.route("/add_tools", methods=["GET", "POST"])
-def add_tools():
-    if request.method == "POST":
-        tools = {
-            "tools_name": request.form.get("tools_name")
-        }
-        mongo.db.tools.insert_one(tools)
-        flash("New Item Added!")
-        return redirect(url_for("get_tools"))
-
-    return render_template("add_tools.html")
-
-
-@app.route("/edit_tools/<tools_id>", methods=["GET", "POST"])
-def edit_tools(tools_id):
-    if request.method == "POST":
-        submit = {
-            "tools_name": request.form.get("tools_name")
-        }
-        mongo.db.tools.update({"_id": ObjectId(tools_id)}, submit)
-        flash("Item Successfully Updated!")
-        return redirect(url_for("get_tools"))
-
-    tools = mongo.db.tools.find_one({"_id": ObjectId(tools_id)})
-    return render_template("edit_tools.html", tools=tools)
-
-
-@app.route("/delete_tools/<tools_id>")
-def delete_tools(tools_id):
-    mongo.db.tools.remove({"_id": ObjectId(tools_id)})
-    flash("Item Successfully Deleted!")
-    return redirect(url_for("get_tools"))
 
 
 if __name__ == "__main__":
