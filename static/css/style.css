@@ -33,3 +33,9 @@
     overflow: hidden;
     height: auto;
 }
+
+.social li {
+    padding: 5px;
+    font-size: 20px;
+    display: inline-block;
+}
