@@ -8,7 +8,7 @@
         <!-- recipe category -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-folder-open prefix light-grey-text text-darken-4"></i>
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled selected>Select a category</option>
                     {% for category in categories %}
@@ -21,7 +21,7 @@
         <!-- recipe title -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-signature prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-signature prefix light-grey-text text-darken-4"></i>
                 <input id="recipe_title" name="recipe_title" minlength="5" maxlength="50" type="text" class="validate"
                     required>
                 <label for="recipe_title">RECIPE TITLE</label>
@@ -30,7 +30,7 @@
         <!-- recipe ingredients -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
                 <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="20" maxlength="2000"
                     class="materialize-textarea validate" required></textarea>
                 <label for="recipe_ingredients">INGREDIENTS</label>
@@ -39,7 +39,7 @@
         <!-- recipe description -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
                 <textarea id="recipe_description" name="recipe_description" minlength="20" maxlength="2000"
                     class="materialize-textarea validate" required></textarea>
                 <label for="recipe_description">DESCRIPTION</label>
@@ -48,7 +48,7 @@
         <!-- recipe image -->
         <div class="row">
             <div class="file-field input-field col s12">
-                <div class="btn blue darken-1">
+                <div class="btn grey darken-1">
                     <i class="fas fa-file-upload white-text"></i>
                     <input type="file" name="file" id="file" />
                     <label for="file" class="white-text" style=" line-height: inherit;">Choose
