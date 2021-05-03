@@ -37,7 +37,7 @@
     </div>
 </div>
 
-<h3 class="light-blue-text text-darken-4 center-align">OUR RECOMMENDED PREMIUM KITCHEN KNIVES</h3>
+<h4 class="blue-grey darken-4 center-align">OUR RECOMMENDED PREMIUM KITCHEN KNIVES</h4>
 
 <div class="carousel">
     <a class="carousel-item"
@@ -61,7 +61,7 @@
             src="https://www.kitchenknives.co.uk/media/catalog/product/cache/1/small_image/330x/9df78eab33525d08d6e5fb8d27136e95/S/A/SAI-M02.png"></a>
 </div>
 
-<h3 class="light-blue-text text-darken-4 center-align">ALL RECIPES</h3>
+<h4 class="light-blue-text text-darken-4 center-align">ALL RECIPES</h4>
 
 <div class="row card-panel grey lighten-5">
     <form action="{{ url_for('search') }}" method="post" class="col s12">
@@ -116,7 +116,7 @@
                     <a href="#modal1-{{recipe._id}}" class="btn-small green accent-4 modal-trigger">Remove</a>
                     <div id="modal1-{{recipe._id}}" class="modal">
                         <div class="modal-content light-blue darken-4 text-shadow">
-                            <h4>Are you sure?</h4>
+                            <h5>Are you sure?</h5>
                         </div>
                         <div class="modal-footer light-blue darken-4 text-shadow">
                             <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
@@ -134,7 +134,7 @@
 </div>
 <!--Else statement for search-->
 {% else %}
-<h4 class="deep-orange-text text-accent-3 center-align">No Recipes Found
-</h4>
+<h5 class="deep-orange-text text-accent-3 center-align">No Recipes Found
+</h5>
 {% endif %}
 {% endblock %}
