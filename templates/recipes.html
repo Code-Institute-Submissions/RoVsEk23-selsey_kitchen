@@ -113,18 +113,19 @@
                 <!-- Admin Update and Delete buttons-->
                 <div class="card-action center-align">
                     {% if session.user|lower == "admin" %}
-                    <a href="#modal1-{{recipe._id}}" class="btn-small green accent-4 modal-trigger">Remove</a>
+                    <a href="#modal1-{{recipe._id}}" class="btn-small deep-orange darken-2 modal-trigger">Remove</a>
                     <div id="modal1-{{recipe._id}}" class="modal">
                         <div class="modal-content light-blue darken-4 text-shadow">
                             <h5>Are you sure?</h5>
                         </div>
                         <div class="modal-footer light-blue darken-4 text-shadow">
                             <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                                class="modal-close waves-effect white-text waves-green btn orange">Yes, Delete!</a>
+                                class="modal-close white-text btn deep-orange darken-2">Yes,
+                                Delete!</a>
                         </div>
                     </div>
                     <a href="{{ url_for('update_recipe', recipe_id=recipe._id) }}"
-                        class="btn-small light-blue lighten-1">Update</a>
+                        class="btn-small green darken-1">Update</a>
                     {% endif %}
                 </div>
             </div>
