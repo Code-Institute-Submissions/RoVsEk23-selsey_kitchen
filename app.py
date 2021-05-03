@@ -242,6 +242,10 @@ def add_category():
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    # Only admin can access categories
+    if not session.get("user") == "admin":
+        return render_template("404.html")
+
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name")
