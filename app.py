@@ -115,6 +115,10 @@ def logout():
 
 @app.route("/dashboard/<username>", methods=["GET", "POST"])
 def dashboard(username):
+    # Only users can acces profile
+    if not session.get("user"):
+        return render_template("404.html")
+
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -124,6 +128,10 @@ def dashboard(username):
 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
+    # Only users can add recipes
+    if not session.get("user"):
+        return render_template("404.html")
+
     if request.method == "POST":
         image_path = upload_file()
         recipe = {
@@ -180,6 +188,10 @@ def upload_file_to_s3(file):
 
 @app.route("/update_recipe/<recipe_id>", methods=["GET", "POST"])
 def update_recipe(recipe_id):
+    # Only users can edit recipes
+    if not session.get("user"):
+        return render_template("404.html")
+
     update_path = upload_file()
     if request.method == "POST":
         submit = {
@@ -208,6 +220,9 @@ def delete_recipe(recipe_id):
 
 @app.route("/get_categories")
 def get_categories():
+    # Only admin can access categories
+    if not session.get("user") == "admin":
+        return render_template("404.html")
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
@@ -244,6 +259,11 @@ def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted!")
     return redirect(url_for("get_categories"))
+
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("404.html"), 404
 
 
 if __name__ == "__main__":
