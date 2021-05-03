@@ -4,29 +4,29 @@
 <div class="row">
     <div class="col s12 m8 offset-m2">
         <div class="card-panel">
-            <h3 class="center-align light-blue-text text-darken-4">
+            <h3 class="center-align grey-text text-darken-2">
                 {{ username }}'s Dashboard
             </h3>
         </div>
     </div>
 </div>
 
-<h3 class="light-blue-text text-darken-4 center-align">MY RECIPES</h3>
+<h3 class="grey-text text-darken-2 center-align">MY RECIPES</h3>
 
 <ul class="collapsible popout">
     {% for recipe in recipes %}
     <li>
         {% if session.user|lower == recipe.created_by|lower %}
-        <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+        <div class="collapsible-header white-text grey darken-1 text-shadow">
             <div class="col s9">
                 <i class="fas fa-caret-down"></i>
                 <strong>{{ recipe.category_name }}</strong> : {{ recipe.recipe_title }}
             </div>
             <div class="col s3">
                 <i class="fas fa-caret-down"></i>
-                <a href="#modal1-{{recipe._id}}" class="btn-small green accent-4 modal-trigger">Remove</a>
+                <a href="#modal1-{{recipe._id}}" class="btn-small deep-orange darken-2 modal-trigger">Remove</a>
                 <div id="modal1-{{recipe._id}}" class="modal">
-                    <div class="modal-content light-blue darken-4 text-shadow">
+                    <div class="modal-content grey darken-1 text-shadow">
                         <h4>Are you sure?</h4>
                     </div>
                     <div class="modal-footer light-blue darken-4 text-shadow">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <a href="{{ url_for('update_recipe', recipe_id=recipe._id) }}"
-                    class="btn-small light-blue lighten-1">Update</a>
+                    class="btn-small green darken-1">Update</a>
             </div>
         </div>
         <div class="collapsible-body">

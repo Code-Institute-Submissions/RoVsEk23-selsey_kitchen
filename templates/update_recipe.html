@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="light-blue-text text-darken-4 center-align">UPDATE RECIPE</h3>
+<h3 class="grey-text text-darken-2 center-align">UPDATE RECIPE</h3>
 
 <div class="row card-panel grey lighten-5">
     <form class="col s12" method="POST" action="{{ url_for('update_recipe', recipe_id=recipe._id) }}"
@@ -9,7 +9,7 @@
         <!-- recipe category -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-folder-open prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-folder-open prefix light-grey-text text-darken-4"></i>
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled>Select a category</option>
                     {% for category in categories %}
@@ -26,7 +26,7 @@
         <!-- recipe title -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-signature prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-signature prefix light-grey-text text-darken-4"></i>
                 <input id="recipe_title" name="recipe_title" minlength="5" maxlength="50"
                     value="{{ recipe.recipe_title }}" type="text" class="validate" required>
                 <label for="recipe_title">RECIPE TITLE</label>
@@ -35,7 +35,7 @@
         <!-- recipe ingredients -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
                 <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="20" maxlength="2000"
                     class="materialize-textarea validate" required>
                     {{- recipe.recipe_ingredients -}}
@@ -46,7 +46,7 @@
         <!-- recipe description -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
                 <textarea id="recipe_description" name="recipe_description" minlength="20" maxlength="2000"
                     class="materialize-textarea validate" required>
                     {{- recipe.recipe_description -}}
@@ -57,7 +57,7 @@
         <!-- recipe image -->
         <div class="row">
             <div class="file-field input-field col s12">
-                <div class="btn light-green darken-1">
+                <div class="btn grey darken-1">
                     <i class="fas fa-file-upload white-text"></i>
                     <input type="file" name="file" id="file" />
                     <label for="file" class="white-text" style=" line-height: inherit;">Choose
@@ -72,10 +72,10 @@
         <div class="row">
             <div class="col s12 center-align">
                 <!-- cancel button -->
-                <a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow">
+                <a href="{{ url_for('get_recipes') }}" class="btn-large deep-orange darken-2 text-shadow">
                     Cancel <i class="fas fa-times-circle right"></i>
                 </a>
-                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+                <button type="submit" class="btn-large green darken-1 text-shadow">
                     Update Recipe <i class="fas fa-edit right"></i>
                 </button>
             </div>
