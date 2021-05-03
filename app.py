@@ -38,7 +38,9 @@ def favicon():
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
-    recipes = list(mongo.db.recipes.find())
+    recipes = list(mongo.db.recipes.find().sort(
+        "_id", -1))
+    print(recipes)
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -172,7 +174,8 @@ def upload_file_to_s3(file):
         print("Something Happened: ", e)
         return e
 
-    return "{}{}".format(S3_LOCATION, file.filename)
+    # return "{}{}".format(S3_LOCATION, file.filename)
+    return "https://{}.s3.amazonaws.com/{}".format(S3_BUCKET_NAME, file.filename)
 
 
 @app.route("/update_recipe/<recipe_id>", methods=["GET", "POST"])
