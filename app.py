@@ -144,7 +144,7 @@ def add_recipe():
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added!")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("dashboard", username=session['user']))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
@@ -192,8 +192,8 @@ def update_recipe(recipe_id):
     if not session.get("user"):
         return render_template("404.html")
 
-    update_path = upload_file()
     if request.method == "POST":
+        update_path = upload_file()
         submit = {
             "category_name": request.form.get("category_name"),
             "recipe_title": request.form.get("recipe_title"),
@@ -204,6 +204,7 @@ def update_recipe(recipe_id):
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated!")
+        return redirect(url_for("dashboard", username=session['user']))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
