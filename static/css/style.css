@@ -1,3 +1,8 @@
+nav .brand-logo {
+    margin-left: 20px;
+    font-size: 40px;
+}
+
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -45,4 +50,20 @@
     max-width: 100%;
     height: 250px;
     overflow: hidden;
+}
+
+@media screen and (max-width: 640px) {
+    nav .brand-logo {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
 }
