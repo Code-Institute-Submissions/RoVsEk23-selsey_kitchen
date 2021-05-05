@@ -11,8 +11,7 @@ $(document).ready(function () {
     $('.modal').modal();
     $('.carousel').carousel();
 
-
-    // Custom Materialize select validation
+    // From code institute Task Manager project - Materialize Form Validation  
 
     validateMaterializeSelect();
 
