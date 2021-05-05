@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- Article cards -->
 <div class="row">
     <div class="col s12 m6">
         <div class="card small">
@@ -37,8 +38,10 @@
     </div>
 </div>
 
+<!-- Title -->
 <h4 class="grey-text text-darken-2 center-align">ALL RECIPES</h4>
 
+<!-- Search recipes -->
 <div class="row card-panel grey lighten-5">
     <form action="{{ url_for('search') }}" method="post" class="col s12">
         <div class="row valign-wrapper center-align">
@@ -57,10 +60,10 @@
     </form>
 </div>
 
+<!-- Recipe cards -->
 {% if recipes|length > 0 %}
 <div class="row">
     {% for recipe in recipes %}
-    <!--Recipe Card-->
     <div class="col s12 m6 l4">
         <div class="card" id="cards">
             <div class="card-image waves-effect waves-block waves-light" id="recipe-image">
@@ -111,6 +114,7 @@
 </h5>
 {% endif %}
 
+<!-- Title courousel -->
 <h4 class="grey-text text-darken-2 center-align">OUR RECOMMENDED PREMIUM KITCHEN KNIVES</h4>
 
 <div class="carousel">

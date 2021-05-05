@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!-- Title -->
 <h3 class="grey-text text-darken-2 center-align">ADD RECIPE</h3>
 
+<!-- Add recipes -->
 <div class="row card-panel grey lighten-5">
     <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}" enctype="multipart/form-data">
         <!-- recipe category -->

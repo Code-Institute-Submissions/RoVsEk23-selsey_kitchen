@@ -19,6 +19,8 @@ S3_LOCATION = os.environ.get("S3_LOCATION")
 
 app = Flask(__name__)
 
+# ---------CONFIGURATION--------  #
+
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -35,6 +37,8 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
+# ---------HOMEPAGE--------  #
+
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
@@ -50,6 +54,8 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+# ---------USERS--------  #
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -61,6 +67,7 @@ def register():
             flash("Username already exists!")
             return redirect(url_for("register"))
 
+        # sign up
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
@@ -114,7 +121,7 @@ def logout():
 
 @app.route("/dashboard/<username>", methods=["GET", "POST"])
 def dashboard(username):
-    # Only users can acces profile
+    # Only users can access profile
     if not session.get("user"):
         return render_template("404.html")
 
@@ -124,6 +131,8 @@ def dashboard(username):
     recipes = list(mongo.db.recipes.find())
     return render_template("dashboard.html", username=username, recipes=recipes)
 
+
+# ---------ADD RECIPES--------  #
 
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
@@ -153,6 +162,8 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+
+# ---------IMAGES--------  #
 
 def upload_file():
     path = url_for('static', filename='images/placeholder.png')
@@ -185,9 +196,11 @@ def upload_file_to_s3(file):
     return "https://{}.s3.amazonaws.com/{}".format(S3_BUCKET_NAME, file.filename)
 
 
+# ---------UPDATE RECIPES--------  #
+
 @app.route("/update_recipe/<recipe_id>", methods=["GET", "POST"])
 def update_recipe(recipe_id):
-    # Only users can edit recipes
+    # Only users can update recipes
     if not session.get("user"):
         return render_template("404.html")
 
@@ -211,12 +224,16 @@ def update_recipe(recipe_id):
                            recipe=recipe, categories=categories)
 
 
+# ---------DELETE RECIPES--------  #
+
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted!")
     return redirect(url_for("dashboard", username=session['user']))
 
+
+# ---------CATEGORIES--------  #
 
 @app.route("/get_categories")
 def get_categories():
@@ -265,10 +282,14 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+# ---------ERROR HANDLER--------  #
+
 @app.errorhandler(404)
 def not_found(e):
     return render_template("404.html"), 404
 
+
+# ---------RUN--------  #
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
