@@ -91,9 +91,6 @@
                     {% if session.user|lower == "admin" %}
                     <a href="#modal1-{{recipe._id}}" class="btn-small deep-orange darken-2 modal-trigger">Delete</a>
                     <div id="modal1-{{recipe._id}}" class="modal">
-                        <div class="modal-content grey darken-1 text-shadow">
-                            <h5>Are you sure?</h5>
-                        </div>
                         <div class="modal-footer grey darken-1 text-shadow">
                             <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
                                 class="modal-close white-text btn deep-orange darken-2">Confirm!</a>

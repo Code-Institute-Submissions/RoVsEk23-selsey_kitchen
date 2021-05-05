@@ -40,7 +40,6 @@ def favicon():
 def get_recipes():
     recipes = list(mongo.db.recipes.find().sort(
         "_id", -1))
-    print(recipes)
     return render_template("recipes.html", recipes=recipes)
 
 

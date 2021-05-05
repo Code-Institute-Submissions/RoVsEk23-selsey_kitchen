@@ -24,14 +24,14 @@
             </div>
             <div class="col s3">
                 <i class="fas fa-caret-down"></i>
-                <a href="#modal1-{{recipe._id}}" class="btn-small deep-orange darken-2 modal-trigger">Remove</a>
+                <a href="#modal1-{{recipe._id}}" class="btn-small deep-orange darken-2 modal-trigger">Delete</a>
                 <div id="modal1-{{recipe._id}}" class="modal">
                     <div class="modal-content grey darken-1 text-shadow">
                         <h4>Are you sure?</h4>
                     </div>
-                    <div class="modal-footer light-blue darken-4 text-shadow">
+                    <div class="modal-footer grey darken-1 text-shadow">
                         <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                            class="modal-close waves-effect white-text waves-green btn orange">Yes, Delete!</a>
+                            class="modal-close waves-effect white-text waves-green btn deep-orange darken-2">Confirm!</a>
                     </div>
                 </div>
                 <a href="{{ url_for('update_recipe', recipe_id=recipe._id) }}"
