@@ -3,7 +3,7 @@
 This is the third Milestone Project undertaken as part of the course for the Full stack developer certification from Code Institute. The purpose is to build a build a full-stack site that allows users to manage a common dataset about a particular domain.
 
 
-![](wireframes/responsive_image.PNG)
+![](screenshots/responsive_image.PNG)
 
 <a href="http://rk-selsey-kitchen.herokuapp.com/" target="_blank">Deployed project domain</a>
 
