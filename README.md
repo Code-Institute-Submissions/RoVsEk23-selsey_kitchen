@@ -21,10 +21,10 @@ Selsey Kitchen is a recipe website for people interested in sharing recipes and 
 HTML5, CSS3, jQuery, Python
 
 `Frameworks, Libraries, Etc. -`
-Gitpod, GIT, GitHub, Materialize, MongoDB, Flask, Jinja, Heroku,  Werkzeug, Mockplus
+Gitpod, GIT, GitHub, Materialize, MongoDB, Flask, Jinja, Heroku, Werkzeug, AWS S3, Mockplus
 
 `Testing -`
-Chrome DevTools,W3C Markup Validator, W3C CSS Validator, PEP8, JShint
+Chrome DevTools, W3C Markup Validator, W3C CSS Validator, PEP8, JShint
 
 ### LAYOUT -
 
@@ -110,22 +110,98 @@ B. CSS VALIDATION
 
 <img src="screenshots/CSS_validator.PNG" width="1000"> 
 
-C. GOOGLE MOBILE TEST
-
-<img src="screenshots/Google_mobile_test.PNG" width="1000"> 
-
-D. PEP8
+C. PEP8
 
 <img src="screenshots/PEP8_python_validator.PNG" width="1000"> 
 
 
+#### 2. RESPONSIVE - 
+
+The website was viewed on a variety of devices such ranging from desktop, tablet, small, medium and large screen mobile devices.
+
+A. GOOGLE MOBILE TEST
+
+<img src="screenshots/Google_mobile_test.PNG" width="1000"> 
 
 
+#### 3. BROWSER
 
+The site was tested on Google Chrome, Firefox and Microsoft Edge. Cross browser invalid links will show a 404 error.
 
+### Deployment - 
 
+Requirements - 
 
+1. Python3
+2. Gitpod
+3. MongoDB 
+4. Heroku 
+5. Github
+6. AWS S3
 
+Steps - 
+
+1. Install requirements: pip3 install -r requirements.txt.
+
+2. Create cluster and database in MongoDB
+
+3. Create the collections in the db: categories, recipes, users.
+
+4. Create AWS account and bucket to upload images.
+
+5. Create env.py
+
+6. Create .gitignore
+
+7. Add env.py file in .gitignore.
+
+8. Env.py code  
+
+import os
+
+os.environ["IP"] = "enter"
+
+os.environ["PORT"] = "enter"
+
+os.environ["SECRET_KEY"] = "enter"
+
+os.environ["MONGO_URI"] = "enter"
+    
+os.environ["MONGO_DBNAME"] = "enter"
+
+os.environ["S3_BUCKET_NAME"] = "enter"
+
+os.environ["S3_KEY"] = "enter"
+
+os.environ["S3_SECRET"] = "enter"
+
+os.environ["S3_LOCATION"] = "enter"
+
+RUN: Type python3 app.py from the terminal window to run the app.
+
+DEPLOYMENT IN HEROKU
+
+1. Set up Heroku account with deployment method  as Github.
+
+2. Set up local workspace for Heroku
+
+3. Gitpod/IDE command: pip3 freeze -- local > requirements.txt and : python app.py > Procfile 
+
+4. Connect to GitHub section in the deploy tab in Heroku
+
+5. Search your repository to connect to Heroku
+
+6. Set up Config Vars in Heroku
+
+7. Enter env.py variables 
+
+8. Push the requirements.txt and Procfile to Github
+
+9. Set up automatic deployment in Heroku. Enable Automatic Deploys. Deploy Branch
+
+10. Heroku will receive the code from Github and host the app 
+
+http://rk-selsey-kitchen.herokuapp.com/
 
 
 
