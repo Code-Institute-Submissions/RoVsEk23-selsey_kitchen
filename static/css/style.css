@@ -17,6 +17,7 @@ nav .brand-logo {
 
 .btn-small {
     margin: 5px;
+    float: right;
 }
 
 .collapsible-header .col strong {
@@ -34,11 +35,6 @@ nav .brand-logo {
 }
 
 #recipe-image {
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    background-size: cover;
-    max-width: 100%;
     overflow: hidden;
     height: auto;
 }
