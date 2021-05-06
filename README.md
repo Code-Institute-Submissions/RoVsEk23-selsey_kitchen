@@ -12,8 +12,50 @@ Selsey Kitchen is a recipe website for people interested in sharing recipes and 
 
 ### WIREFRAMES -
 
-1. <a href="" target="_blank">Desktop wireframe (Github link)</a>
-2. <a href="" target="_blank">Mobile wireframe (Github link)</a>
+1. <a href="https://github.com/RoVsEk23/selsey_kitchen/blob/master/wireframes/desktop_wireframes.pdf" target="_blank">Desktop wireframe (Github link)</a>
+2. <a href="https://github.com/RoVsEk23/selsey_kitchen/blob/master/wireframes/mobile_wireframes.pdf" target="_blank">Mobile wireframe (Github link)</a>
+
+### TECHNOLOGY -
+
+`Languages used -` 
+HTML5, CSS3, jQuery, Python
+
+`Frameworks, Libraries, Etc. -`
+Gitpod, GIT, GitHub, Materialize, MongoDB, Flask, Jinja, Heroku,  Werkzeug, Mockplus
+
+`Testing -`
+Chrome DevTools,W3C Markup Validator, W3C CSS Validator, PEP8, JShint
+
+### LAYOUT -
+
+#### 1. DESKTOP
+
+##### LANDING PAGE
+
+<img src="screenshots/desktop_landing_page_1.PNG" width="300"> <img src="screenshots/desktop_landing_page_2.PNG" width="300"> <img src="screenshots/desktop_landing_page_3.PNG" width="300">
+
+##### DASHBOARD, ADD RECIPES, UPDATE RECIPES
+
+<img src="screenshots/desktop_dashboard.PNG" width="300"> <img src="screenshots/desktop_add_recipe.PNG" width="300"> <img src="screenshots/desktop_update_recipes.PNG" width="300">
+
+##### MANAGE CATEGORIES, DELETE CONFIRMATION
+
+<img src="screenshots/desktop_admin_manage_categories.PNG" width="300"> <img src="screenshots/desktop_delete_confirmation.PNG" width="300"> 
+
+
+#### 2. MOBILE
+
+##### LANDING PAGE
+
+<img src="screenshots/mobile_landing_page_1.PNG" width="200"> <img src="screenshots/mobile_landing_page_2.PNG" width="200"> <img src="screenshots/mobile_landing_page_3.PNG" width="200"> <img src="screenshots/mobile_landing_page_4.PNG" width="200"> 
+
+##### DASHBOARD, ADD RECIPES, UPDATE RECIPES
+
+<img src="screenshots/mobile_dashboard.PNG" width="200"> <img src="screenshots/mobile_add_recipe.PNG" width="200"> <img src="screenshots/mobile_update_recipes.PNG" width="200"> 
+
+##### MANAGE CATEGORIES, DELETE CONFIRMATION, LOG IN
+
+<img src="screenshots/mobile_admin_manage_categories.PNG" width="200"> <img src="screenshots/mobile_delete_confirmation.PNG" width="200"> <img src="screenshots/mobile_log_in.PNG" width="200"> 
 
 
 
@@ -21,55 +63,3 @@ Selsey Kitchen is a recipe website for people interested in sharing recipes and 
 
 
 
-
-
-
-
-
-
-
-
-
-Welcome RoVsEk23,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
----
-
-Happy coding!
