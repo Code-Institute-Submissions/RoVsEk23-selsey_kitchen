@@ -1,4 +1,34 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# PROJECT NAME - SELSEY KITCHEN
+
+This is the third Milestone Project undertaken as part of the course for the Full stack developer certification from Code Institute. The purpose is to build a build a full-stack site that allows users to manage a common dataset about a particular domain.
+
+
+![](wireframes/responsive_image.PNG)
+
+<a href="http://rk-selsey-kitchen.herokuapp.com/" target="_blank">Deployed project domain</a>
+
+### UX - 
+Selsey Kitchen is a recipe website for people interested in sharing recipes and getting inspired to try new recipes. It allows the user to add, delete and update a set of recipes and has a useful search option. The website also shared relevant news and blogs from other cooking websites in addition to promoting a range of premium kitchen knives for users and visitors.
+
+### WIREFRAMES -
+
+1. <a href="" target="_blank">Desktop wireframe (Github link)</a>
+2. <a href="" target="_blank">Mobile wireframe (Github link)</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Welcome RoVsEk23,
 
