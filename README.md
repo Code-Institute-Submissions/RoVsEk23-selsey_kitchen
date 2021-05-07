@@ -99,6 +99,8 @@ Chrome DevTools, W3C Markup Validator, W3C CSS Validator, PEP8, JShint
 
 4. User profile form added to dashboard with relevant user information.
 
+5. I have not paid too much attention to the cosmetic side of the site. I have focussed more on the functionality. Some cosmetic enhancements need to me made later.
+
 
 ### USER STORIES
 
@@ -186,6 +188,25 @@ A. GOOGLE MOBILE TEST
 #### 3. BROWSER
 
 The site was tested on Google Chrome, Firefox and Microsoft Edge. Cross browser invalid links will show a 404 error.
+
+### MANUAL TESTING - 
+
+#### 1. HEADER - All links on header and the mobile navbar work as expected. The logo redirects to the homepage. 
+
+#### 2. FOOTER - Social media links and Github link open in a new tab.
+
+#### 3. HOMEPAGE - Visitor and member view of homepage displays exactly the same. Links to article cards open in a new window. Search functionaly returns results as expected. The card display of recipes responds as intended. Update and Delete buttons available on each recipe when accessed by admin.
+
+#### 4. DASHBOARD - The simple collapsible popout list for recipes persofrms as intended for admin and members. Update and Delete buttons redirect to relavant actions. Modal functionality for delete button works.
+
+#### 5. NEW RECIPE - Add recipe page form loads accrately. Input fields are validated.
+
+#### 6. MANAGE CATEGORIES - Manage categories page for admin loads simple cards with edit and delete buttons. Add and Edit form loads accurately. Modal functionality for delete button works.
+
+#### 7. LOG IN and REGISTER PAGE - All links work accurately.
+
+All Flash messages are displayed accurately.
+
 
 ### DEPLOYMENT - 
 
