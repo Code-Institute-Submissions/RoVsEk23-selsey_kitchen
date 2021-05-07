@@ -68,6 +68,8 @@ Chrome DevTools, W3C Markup Validator, W3C CSS Validator, PEP8, JShint
 
 3. Flash messages for every action that the user or admin does. Defensive programming by modal on delete actions.
 
+4. Defensive programming approach used for validating username, password and input fields on add and update recipes. 
+
 4. The header provides easy navigation to various pages and also the drop down menu for mobile.
 
 5. The footer has links to social media and my personal Github page.
@@ -263,5 +265,49 @@ http://rk-selsey-kitchen.herokuapp.com/
 
 
 ### CREDITS -
+
+
+#### A. EXTERNAL RESOURCES
+
+<a href="https://www.w3schools.com/" target="_blank">W3schools</a> and <a href="https://stackoverflow.com/" target="_blank">Stackoverflow</a> for help with bugs and code
+
+<a href="https://fontawesome.com/" target="_blank">Fontawesome</a> for icons
+
+<a href="https://www.mockplus.com/" target="_blank">Mockplus</a> for wireframes
+
+<a href="https://randomkeygen.com/" target="_blank">Random Key Generator</a> for passwords
+
+<a href="https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3.html" target="_blank">Boto3 Documentation</a> for image upload 
+
+<a href="https://stackabuse.com/file-management-with-aws-s3-python-and-flask/" target="_blank">AWS S3 Configuration</a> for image upload config
+
+<a href="https://www.youtube.com/watch?v=mBKKZN1MMBM" target="_blank">404 error handler</a> tutorial
+
+<a href="https://www.epicurious.com/" target="_blank">Epicurious</a> for articles
+
+<a href="https://www.bbc.co.uk/food" target="_blank">BBC Food Guide</a> for all recipes and recipe images
+
+<a href="http://ami.responsivedesign.is/" target="_blank">http://ami.responsivedesign.is/</a> image for readme banner
+
+<a href="https://designshack.net/articles/software/placeholder-image/" target="_blank">Placeholder</a> image 
+
+<a href="https://www.kitchenknives.co.uk/" target="_blank">Products</a> in knives corousel 
+
+
+
+
+#### B.  INTERNAL RESOURCES
+
+Code Institute- Task Manager mini project for a lot of the site functionality
+
+Code Institute tutor support
+
+
+
+
+
+
+
+
 
 
