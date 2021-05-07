@@ -8,7 +8,7 @@ This is the third Milestone Project undertaken as part of the course for the Ful
 <a href="http://rk-selsey-kitchen.herokuapp.com/" target="_blank">Deployed project domain</a>
 
 ### UX - 
-Selsey Kitchen is a recipe website for people interested in sharing recipes and getting inspired to try new recipes. It allows the user to add, delete and update a set of recipes and has a useful search option. The website also shared relevant news and blogs from other cooking websites in addition to promoting a range of premium kitchen knives for users and visitors.
+Selsey Kitchen is a recipe website for people interested in sharing recipes and getting inspired to try new recipes. It allows the user to add, delete and update a set of recipes and has a useful search option. The website also shared relevant news and blogs from other cooking websites in addition to promoting a range of premium kitchen knives for users and visitors. The site is designed for the administrator to be an active particiant/user and have full access to all recipes posted. The admin can also add, edit or delete the various recipe categories.
 
 ### WIREFRAMES -
 
@@ -21,7 +21,7 @@ Selsey Kitchen is a recipe website for people interested in sharing recipes and 
 HTML5, CSS3, jQuery, Python
 
 `Frameworks, Libraries, Etc. -`
-Gitpod, GIT, GitHub, Materialize, MongoDB, Flask, Jinja, Heroku, Werkzeug, AWS S3, Mockplus
+Gitpod, GIT, GitHub, Materialize, MongoDB, Flask, Jinja, Heroku, Werkzeug, AWS SDK - Boto3, AWS S3, Mockplus
 
 `Testing -`
 Chrome DevTools, W3C Markup Validator, W3C CSS Validator, PEP8, JShint
@@ -98,6 +98,63 @@ Chrome DevTools, W3C Markup Validator, W3C CSS Validator, PEP8, JShint
 4. User profile form added to dashboard with relevant user information.
 
 
+### USER STORIES
+
+##### A. VISITORS
+
+1. As a visitor, I want to be able to view the site on desktop, mobile and tablet.
+
+Acceptance: Visitors can view the site on desktop, tablet or phone.
+
+2. As a visitor, I want the website to be simple and with easy navigation.
+
+Acceptance: Visitors can navigate through the site using the navbar on the header. For the mobile visitors there is a dropdown hamburger menu. 
+
+3. As a visitor, I want to see a list of all recipes on offer before I decide to register. 
+
+Acceptance: Visitors can view cards of all recipes on the site and have the same homepage view as all users.
+
+4. As a visitor, I want to be able to search for recipes that are relevant to me.
+
+Acceptance: There is search functionality on the top of the recipe cards that allow the visitor the ability to search from the ingredients and desciption of all recipes.
+
+5. As a visitor, I want to register an account, so I can share my recipes.
+
+Acceptance: The visitor can use the register button the header to redirect to the registration page. Visitors who have already registered can link to the login page from the register page.
+
+##### B. MEMBERS
+
+1. As a member, I want to login and logout of my account.
+
+Acceptance: Members can access login and logout from the header or from the dropdown nav on mobile.  
+
+1. As a member, I want to add and share recipes.
+
+Acceptance: After logging in members can click on 'New recipe' in the header or the dropdown on mobile to redirect to the add new recipe page.
+
+2. As a member, I want to be able to add a recipe without having an image to upload initially.
+
+Acceptance: A member can add a new recie without having an image to upload. A placeholder image will be used. But they must upload image when they want to update the recipe.
+
+3. As member, I want to be able to update or delete my recipes.
+
+Acceptance: Member have a dashboard with a collapsible menu that lists all their recipes. They can update or delete their recipes from this page. The update recipe button will redirect the user to the update recipe form. The delete button deletes the members unwanted recipes.
+
+##### C. ADMIN
+
+1. As admin, I want to be able to be able to perform all tasks that are available to members.
+
+Acceptance: The site is designed for the admin to be an active participant in all ways that a member is. The admin can add, update and delete recipes from the dashboard.
+
+2. As admin, I want to be able to have access to update or delete any member recipes.
+
+Acceptance: The admin has access to update or delete recipes throughout the site directly from the homepage. Every recipe card has edit and delete buttons that are accessible only to the admin.
+
+3. As admin, I want to be able to add, edit or delete recipe categories.
+
+Acceptance: The admin can add, edit or delete categories from the manage categories page.
+
+
 ### TESTING -
 
 #### 1. CODE VALIDATION
@@ -128,7 +185,7 @@ A. GOOGLE MOBILE TEST
 
 The site was tested on Google Chrome, Firefox and Microsoft Edge. Cross browser invalid links will show a 404 error.
 
-### Deployment - 
+### DEPLOYMENT - 
 
 Requirements - 
 
@@ -137,7 +194,8 @@ Requirements -
 3. MongoDB 
 4. Heroku 
 5. Github
-6. AWS S3
+6. AWS SDK - Boto3
+7. AWS S3
 
 Steps - 
 
@@ -204,6 +262,6 @@ DEPLOYMENT IN HEROKU
 http://rk-selsey-kitchen.herokuapp.com/
 
 
-
+### CREDITS -
 
 
