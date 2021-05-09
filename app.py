@@ -32,11 +32,6 @@ s3 = boto3.client("s3", aws_access_key_id=S3_KEY,
 mongo = PyMongo(app)
 
 
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
-
-
 # ---------HOMEPAGE--------  #
 
 @app.route("/")
