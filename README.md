@@ -88,6 +88,9 @@ Chrome DevTools, W3C Markup Validator, W3C CSS Validator, PEP8, JShint
 
 6. The admin has a manage categories page available where categories can be added, edited, or deleted.
 
+##### KNOWN ISSUES - 
+
+1. Currently,  only uploaded image sizing of 1600 X 900 works best for cards to stay alligned. The placeholder image is also set to this dimension. I think I need to use some python functionality like PIL import Image and set import image resizing criteria for the images to be uploaded without breaking the grid. I have not been able to implement this because of the submission deadline.
 
 ##### FEATURES TO ADD IN FUTURE - 
 
@@ -313,7 +316,6 @@ http://rk-selsey-kitchen.herokuapp.com/
 <a href="https://designshack.net/articles/software/placeholder-image/" target="_blank">Placeholder</a> image 
 
 <a href="https://www.kitchenknives.co.uk/" target="_blank">Products</a> in knives corousel 
-
 
 
 
