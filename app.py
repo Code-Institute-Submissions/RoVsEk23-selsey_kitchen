@@ -209,6 +209,11 @@ def update_recipe(recipe_id):
             "file": update_path,
             "created_by": session["user"]
         }
+        current_key = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+        # print(f"current key is {current_key}")
+        if current_key['file'][:4] == 'http' and submit['file'].find('placeholder.png') != -1:
+            submit['file'] = current_key['file']
+        # print(f"rohit's log:{submit}")
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated!")
         return redirect(url_for("dashboard", username=session['user']))
