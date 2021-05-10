@@ -223,6 +223,10 @@ def update_recipe(recipe_id):
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
+    # Only users can access profile
+    if not session.get("user"):
+        return render_template("404.html")
+
     mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted!")
     return redirect(url_for("dashboard", username=session['user']))

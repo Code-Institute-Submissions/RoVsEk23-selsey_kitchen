@@ -29,7 +29,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-signature prefix light-grey-text text-darken-4"></i>
-                <input id="recipe_title" name="recipe_title" minlength="5" maxlength="50"
+                <input id="recipe_title" name="recipe_title" minlength="5" maxlength="100"
                     value="{{ recipe.recipe_title }}" type="text" pattern="^[^\s][A-Za-z0-9\s]{1,20}$" class="validate"
                     required>
                 <label for="recipe_title">RECIPE TITLE</label>
@@ -62,7 +62,7 @@
             <div class="file-field input-field col s12">
                 <div class="btn grey darken-1">
                     <i class="fas fa-file-upload white-text"></i>
-                    <input type="file" name="file" id="update_image" required />
+                    <input type="file" name="file" id="update_image" />
                     <label for="update_image" class="white-text" style="line-height: inherit;"
                         value="{{ recipe.file }}">Choose Image (1600 X 900)</label>
                 </div>
