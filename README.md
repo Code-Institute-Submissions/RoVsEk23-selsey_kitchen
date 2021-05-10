@@ -323,7 +323,7 @@ http://rk-selsey-kitchen.herokuapp.com/
 
 Code Institute- Task Manager mini project for a lot of the site functionality
 
-Code Institute tutor support
+Code Institute mentor and tutor support
 
 
 
