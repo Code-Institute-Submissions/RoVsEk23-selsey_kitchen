@@ -164,7 +164,7 @@ Desktop: 1024px, 1366px, 1440px, 1600px and 1680px.
 
 Mobile & Tablet: Galaxy S5, iPhone 5/SE, iPhone 6/7/8, iPhone 6/7/8 plus, iPhone x, iPad and iPad Pro
 
-<img src="screenshots/responsiveness_testing.PNG" width="800"> 
+<img src="screenshots/responsiveness_testing.png" width="800"> 
 
 A. GOOGLE MOBILE TEST
 
@@ -175,7 +175,7 @@ A. GOOGLE MOBILE TEST
 
 The site was tested on Google Chrome, Firefox and Microsoft Edge. Cross browser invalid links will show a 404 error.
 
-<img src="screenshots/browser_compatibility.PNG" width="600"> 
+<img src="screenshots/browser_compatibility.png" width="600"> 
 
 
 ### MANUAL TESTING - 
