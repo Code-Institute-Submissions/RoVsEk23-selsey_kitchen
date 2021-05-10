@@ -175,7 +175,7 @@ A. GOOGLE MOBILE TEST
 
 The site was tested on Google Chrome, Firefox and Microsoft Edge. Cross browser invalid links will show a 404 error.
 
-<img src="screenshots/browser_compatibility.png" width="600"> 
+<img src="screenshots/browser_compatibility1.png" width="600"> 
 
 
 ### MANUAL TESTING - 
