@@ -324,11 +324,11 @@ http://rk-selsey-kitchen.herokuapp.com/
 
 #### A. EXTERNAL RESOURCES
 
+CODE:
+
 <a href="https://www.w3schools.com/" target="_blank">W3schools</a> and <a href="https://stackoverflow.com/" target="_blank">Stackoverflow</a> for help with bugs and code
 
 <a href="https://fontawesome.com/" target="_blank">Fontawesome</a> for icons
-
-<a href="https://www.mockplus.com/" target="_blank">Mockplus</a> for wireframes
 
 <a href="https://randomkeygen.com/" target="_blank">Random Key Generator</a> for passwords
 
@@ -338,9 +338,11 @@ http://rk-selsey-kitchen.herokuapp.com/
 
 <a href="https://www.youtube.com/watch?v=mBKKZN1MMBM" target="_blank">404 error handler</a> tutorial
 
-<a href="https://www.epicurious.com/" target="_blank">Epicurious</a> for articles
+MEDIA:
 
-<a href="https://www.bbc.co.uk/food" target="_blank">BBC Food Guide</a> for all recipes and recipe images
+<a href="https://www.mockplus.com/" target="_blank">Mockplus</a> for wireframes
+
+<a href="https://www.epicurious.com/" target="_blank">Epicurious</a> for articles
 
 <a href="http://ami.responsivedesign.is/" target="_blank">http://ami.responsivedesign.is/</a> image for readme banner
 
@@ -348,7 +350,9 @@ http://rk-selsey-kitchen.herokuapp.com/
 
 <a href="https://www.kitchenknives.co.uk/" target="_blank">Products</a> in knives corousel 
 
+RECIPES:
 
+<a href="https://www.bbc.co.uk/food" target="_blank">BBC Food Guide</a> for all recipes and recipe images
 
 #### B.  INTERNAL RESOURCES
 
