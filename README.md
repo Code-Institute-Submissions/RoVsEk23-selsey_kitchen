@@ -111,55 +111,31 @@ Chrome DevTools, W3C Markup Validator, W3C CSS Validator, PEP8, JShint
 
 1. As a visitor, I want to be able to view the site on desktop, mobile and tablet.
 
-Acceptance: Visitors can view the site on desktop, tablet or phone.
-
 2. As a visitor, I want the website to be simple and with easy navigation.
-
-Acceptance: Visitors can navigate through the site using the navbar on the header. For the mobile visitors there is a dropdown hamburger menu. 
 
 3. As a visitor, I want to see a list of all recipes on offer before I decide to register. 
 
-Acceptance: Visitors can view cards of all recipes on the site and have the same homepage view as all users.
-
 4. As a visitor, I want to be able to search for recipes that are relevant to me.
 
-Acceptance: There is search functionality on the top of the recipe cards that allow the visitor the ability to search from the ingredients and desciption of all recipes.
-
 5. As a visitor, I want to register an account, so I can share my recipes.
-
-Acceptance: The visitor can use the register button the header to redirect to the registration page. Visitors who have already registered can link to the login page from the register page.
 
 ##### B. MEMBERS
 
 1. As a member, I want to login and logout of my account.
 
-Acceptance: Members can access login and logout from the header or from the dropdown nav on mobile.  
+2. As a member, I want to add and share recipes.
 
-1. As a member, I want to add and share recipes.
+3. As a member, I want to be able to add a recipe without having an image to upload initially.
 
-Acceptance: After logging in members can click on 'New recipe' in the header or the dropdown on mobile to redirect to the add new recipe page.
-
-2. As a member, I want to be able to add a recipe without having an image to upload initially.
-
-Acceptance: A member can add a new recie without having an image to upload. A placeholder image will be used. But they must upload image when they want to update the recipe.
-
-3. As member, I want to be able to update or delete my recipes.
-
-Acceptance: Member have a dashboard with a collapsible menu that lists all their recipes. They can update or delete their recipes from this page. The update recipe button will redirect the user to the update recipe form. The delete button deletes the members unwanted recipes.
+4. As member, I want to be able to update or delete my recipes.
 
 ##### C. ADMIN
 
 1. As admin, I want to be able to be able to perform all tasks that are available to members.
 
-Acceptance: The site is designed for the admin to be an active participant in all ways that a member is. The admin can add, update and delete recipes from the dashboard.
-
 2. As admin, I want to be able to have access to update or delete any member recipes.
 
-Acceptance: The admin has access to update or delete recipes throughout the site directly from the homepage. Every recipe card has edit and delete buttons that are accessible only to the admin.
-
 3. As admin, I want to be able to add, edit or delete recipe categories.
-
-Acceptance: The admin can add, edit or delete categories from the manage categories page.
 
 
 ### TESTING -
@@ -210,6 +186,61 @@ The site was tested on Google Chrome, Firefox and Microsoft Edge. Cross browser 
 
 All Flash messages are displayed accurately.
 
+### TESTING USER STORIES
+
+##### A. VISITORS
+
+1. As a visitor, I want to be able to view the site on desktop, mobile and tablet.
+
+Acceptance: Visitors can view the site on desktop, tablet or phone.
+
+2. As a visitor, I want the website to be simple and with easy navigation.
+
+Acceptance: Visitors can navigate through the site using the navbar on the header. For the mobile visitors there is a dropdown hamburger menu. 
+
+3. As a visitor, I want to see a list of all recipes on offer before I decide to register. 
+
+Acceptance: Visitors can view cards of all recipes on the site and have the same homepage view as all users.
+
+4. As a visitor, I want to be able to search for recipes that are relevant to me.
+
+Acceptance: There is search functionality on the top of the recipe cards that allow the visitor the ability to search from the ingredients and desciption of all recipes.
+
+5. As a visitor, I want to register an account, so I can share my recipes.
+
+Acceptance: The visitor can use the register button the header to redirect to the registration page. Visitors who have already registered can link to the login page from the register page.
+
+##### B. MEMBERS
+
+1. As a member, I want to login and logout of my account.
+
+Acceptance: Members can access login and logout from the header or from the dropdown nav on mobile.  
+
+1. As a member, I want to add and share recipes.
+
+Acceptance: After logging in members can click on 'New recipe' in the header or the dropdown on mobile to redirect to the add new recipe page.
+
+2. As a member, I want to be able to add a recipe without having an image to upload initially.
+
+Acceptance: A member can add a new recie without having an image to upload. A placeholder image will be used. But they must upload image when they want to update the recipe.
+
+3. As member, I want to be able to update or delete my recipes.
+
+Acceptance: Member have a dashboard with a collapsible menu that lists all their recipes. They can update or delete their recipes from this page. The update recipe button will redirect the user to the update recipe form. The delete button deletes the members unwanted recipes.
+
+##### C. ADMIN
+
+1. As admin, I want to be able to be able to perform all tasks that are available to members.
+
+Acceptance: The site is designed for the admin to be an active participant in all ways that a member is. The admin can add, update and delete recipes from the dashboard.
+
+2. As admin, I want to be able to have access to update or delete any member recipes.
+
+Acceptance: The admin has access to update or delete recipes throughout the site directly from the homepage. Every recipe card has edit and delete buttons that are accessible only to the admin.
+
+3. As admin, I want to be able to add, edit or delete recipe categories.
+
+Acceptance: The admin can add, edit or delete categories from the manage categories page.
 
 ### DEPLOYMENT - 
 
@@ -225,21 +256,21 @@ Requirements -
 
 Steps - 
 
-1. Install requirements: pip3 install -r requirements.txt.
+1. Install requirements: pip install -r requirements.txt.
 
 2. Create cluster and database in MongoDB
 
 3. Create the collections in the db: categories, recipes, users.
 
-4. Create AWS account and bucket to upload images.
+4. Create an AWS account and configure bucket to upload images.
 
-5. Create env.py
+5. Create environment variables file env.py
 
-6. Create .gitignore
+6. Create .gitignore file
 
 7. Add env.py file in .gitignore.
 
-8. Env.py code  
+8. Env.py code as follows  
 
 import os
 
@@ -265,13 +296,13 @@ RUN: Type python3 app.py from the terminal window to run the app.
 
 DEPLOYMENT IN HEROKU
 
-1. Set up Heroku account with deployment method  as Github.
+1. Set up Heroku account with deployment method as Github. Enter pip3 freeze -- local > requirements.txt in Girpod then python app.py > Procfile.
 
 2. Set up local workspace for Heroku
 
 3. Gitpod/IDE command: pip3 freeze -- local > requirements.txt and : python app.py > Procfile 
 
-4. Connect to GitHub section in the deploy tab in Heroku
+4. Connect to GitHub section in the deploy tab in Heroku. Push requirements.txt and Procfile to Github repository.
 
 5. Search your repository to connect to Heroku
 
@@ -281,7 +312,7 @@ DEPLOYMENT IN HEROKU
 
 8. Push the requirements.txt and Procfile to Github
 
-9. Set up automatic deployment in Heroku. Enable Automatic Deploys. Deploy Branch
+9. Set up automatic deployment in Heroku. Enable Automatic Deploys. Deploy Branch.
 
 10. Heroku will receive the code from Github and host the app 
 
