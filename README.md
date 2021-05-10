@@ -10,6 +10,40 @@ This is the third Milestone Project undertaken as part of the course for the Ful
 ### UX - 
 Selsey Kitchen is a recipe website for people interested in sharing recipes and getting inspired to try new recipes. It allows the user to add, delete and update a set of recipes and has a useful search option. The website also shared relevant news and blogs from other cooking websites in addition to promoting a range of premium kitchen knives for users and visitors. The site is designed for the administrator to be an active particiant/user and have full access to all recipes posted. The admin can also add, edit or delete the various recipe categories.
 
+
+### USER STORIES
+
+##### A. VISITORS
+
+1. As a visitor, I want to be able to view the site on desktop, mobile and tablet.
+
+2. As a visitor, I want the website to be simple and with easy navigation.
+
+3. As a visitor, I want to see a list of all recipes on offer before I decide to register. 
+
+4. As a visitor, I want to be able to search for recipes that are relevant to me.
+
+5. As a visitor, I want to register an account, so I can share my recipes.
+
+##### B. MEMBERS
+
+1. As a member, I want to login and logout of my account.
+
+2. As a member, I want to add and share recipes.
+
+3. As a member, I want to be able to add a recipe without having an image to upload initially.
+
+4. As member, I want to be able to update or delete my recipes.
+
+##### C. ADMIN
+
+1. As admin, I want to be able to be able to perform all tasks that are available to members.
+
+2. As admin, I want to be able to have access to update or delete any member recipes.
+
+3. As admin, I want to be able to add, edit or delete recipe categories.
+
+
 ### WIREFRAMES -
 
 1. <a href="https://github.com/RoVsEk23/selsey_kitchen/blob/master/wireframes/desktop_wireframes.pdf" target="_blank">Desktop wireframe (Github link)</a>
@@ -105,39 +139,6 @@ Chrome DevTools, W3C Markup Validator, W3C CSS Validator, PEP8, JShint
 5. I have not paid too much attention to the cosmetic side of the site. I have focussed more on the functionality. Some cosmetic enhancements need to me made later.
 
 
-### USER STORIES
-
-##### A. VISITORS
-
-1. As a visitor, I want to be able to view the site on desktop, mobile and tablet.
-
-2. As a visitor, I want the website to be simple and with easy navigation.
-
-3. As a visitor, I want to see a list of all recipes on offer before I decide to register. 
-
-4. As a visitor, I want to be able to search for recipes that are relevant to me.
-
-5. As a visitor, I want to register an account, so I can share my recipes.
-
-##### B. MEMBERS
-
-1. As a member, I want to login and logout of my account.
-
-2. As a member, I want to add and share recipes.
-
-3. As a member, I want to be able to add a recipe without having an image to upload initially.
-
-4. As member, I want to be able to update or delete my recipes.
-
-##### C. ADMIN
-
-1. As admin, I want to be able to be able to perform all tasks that are available to members.
-
-2. As admin, I want to be able to have access to update or delete any member recipes.
-
-3. As admin, I want to be able to add, edit or delete recipe categories.
-
-
 ### TESTING -
 
 #### 1. CODE VALIDATION
@@ -157,7 +158,13 @@ C. PEP8
 
 #### 2. RESPONSIVE - 
 
-The website was viewed on a variety of devices such ranging from desktop, tablet, small, medium and large screen mobile devices.
+The website was tested with Chrome DevTools and Responsive Design Checker on a variety of devices ranging from desktop, tablet, small, medium and large screen mobile devices.
+
+Desktop: 1024px, 1366px, 1440px, 1600px and 1680px.
+
+Mobile & Tablet: Galaxy S5, iPhone 5/SE, iPhone 6/7/8, iPhone 6/7/8 plus, iPhone x, iPad and iPad Pro
+
+<img src="screenshots/responsiveness_testing.PNG" width="800"> 
 
 A. GOOGLE MOBILE TEST
 
@@ -167,6 +174,9 @@ A. GOOGLE MOBILE TEST
 #### 3. BROWSER
 
 The site was tested on Google Chrome, Firefox and Microsoft Edge. Cross browser invalid links will show a 404 error.
+
+<img src="screenshots/browser_compatibility.PNG" width="600"> 
+
 
 ### MANUAL TESTING - 
 
