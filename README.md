@@ -66,7 +66,7 @@ Chrome DevTools, W3C Markup Validator, W3C CSS Validator, PEP8, JShint
 
 ##### LANDING PAGE
 
-<img src="screenshots/desktop_landing_page_1.PNG" width="300"> <img src="screenshots/desktop_landing_page_2.PNG" width="300"> <img src="screenshots/desktop_landing_page_3.PNG" width="300">
+<img src="screenshots/desktop_landing_page_1.PNG" width="300"> <img src="screenshots/desktop_landing_page_2.PNG" width="300"> <img src="screenshots/desktop_landing_page_3.PNG" width="300"> <img src="screenshots/desktop_landing_page_4.PNG" width="300">
 
 ##### DASHBOARD, ADD RECIPES, UPDATE RECIPES
 
@@ -81,7 +81,7 @@ Chrome DevTools, W3C Markup Validator, W3C CSS Validator, PEP8, JShint
 
 ##### LANDING PAGE
 
-<img src="screenshots/mobile_landing_page_1.PNG" width="200"> <img src="screenshots/mobile_landing_page_2.PNG" width="200"> <img src="screenshots/mobile_landing_page_3.PNG" width="200"> <img src="screenshots/mobile_landing_page_4.PNG" width="200"> 
+<img src="screenshots/mobile_landing_page_1.PNG" width="200"> <img src="screenshots/mobile_landing_page_2.PNG" width="200"> <img src="screenshots/mobile_landing_page_3.PNG" width="200"> <img src="screenshots/mobile_landing_page_4.PNG" width="200"> <img src="screenshots/mobile_landing_page_5.PNG" width="200"> 
 
 ##### DASHBOARD, ADD RECIPES, UPDATE RECIPES
 
