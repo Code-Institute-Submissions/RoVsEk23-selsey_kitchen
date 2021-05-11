@@ -122,6 +122,14 @@ Chrome DevTools, W3C Markup Validator, W3C CSS Validator, PEP8, JShint
 
 6. The admin has a manage categories page available where categories can be added, edited, or deleted.
 
+##### BUGS - 
+
+1. Initially the modal was deleting the incorrect record. I was able to pass the modal the correct recipe id to fix this bug.
+
+2. I was initially unable to configure the connection between MongoDB and AWS S3 despite following the documentation provided. I was only able to get the placeholder image to load to the site but not the uploaded image. I was then able to use some information on stack overflow to help define the path correctly.
+
+3. A bug was found in the update_recipe function which was preventing the user from updating the file without uploading a new image as the image would revert to the placeholder image when an update was performed without adding a new image. I was advised by tutor support to use the $Set method to fix this issue. But i have used an alternate method which is an easy fix (maybe not ideal) to sort the issue. I have added a conditon that checks for the first 4 charaters "http" to select the file path.  
+
 ##### KNOWN ISSUES - 
 
 1. Currently,  only uploaded image sizing of 1600 X 900 works best for cards to stay alligned. The placeholder image is also set to this dimension. I think I need to use some python functionality like PIL import Image and set import image resizing criteria for the images to be uploaded without breaking the grid. I have not been able to implement this because of the submission deadline.
@@ -232,7 +240,7 @@ Acceptance: After logging in members can click on 'New recipe' in the header or 
 
 2. As a member, I want to be able to add a recipe without having an image to upload initially.
 
-Acceptance: A member can add a new recie without having an image to upload. A placeholder image will be used. But they must upload image when they want to update the recipe.
+Acceptance: A member can add a new recie without having an image to upload. A placeholder image will be used. 
 
 3. As member, I want to be able to update or delete my recipes.
 
