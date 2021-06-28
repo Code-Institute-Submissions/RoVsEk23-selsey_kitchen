@@ -55,7 +55,8 @@ def search():
 def register():
     if session.get("user"):
         # check if user can access register page from session
-        return render_template("404.html")
+        flash("You have already registered!")
+        return redirect(url_for("dashboard", username=session['user']))
 
     if request.method == "POST":
         # check if username already exists in db
@@ -85,7 +86,8 @@ def register():
 def login():
     if session.get("user"):
         # check if user can access login page from session
-        return render_template("404.html")
+        flash("You are already logged in!")
+        return redirect(url_for("dashboard", username=session['user']))
 
     if request.method == "POST":
         # check if username exists in db
