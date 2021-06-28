@@ -6,8 +6,8 @@
     <div class="col s12 m6">
         <div class="card small">
             <div class="card-image">
-                <img
-                    src="https://assets.epicurious.com/photos/6070b4b4ff5721393599a5d3/16:9/w_2560%2Cc_limit/RedPepperPasta_HERO_040821_12876.jpg">
+                <img src="https://assets.epicurious.com/photos/6070b4b4ff5721393599a5d3/16:9/w_2560%2Cc_limit/RedPepperPasta_HERO_040821_12876.jpg"
+                    alt="image">
             </div>
             <div class="card-content">
                 <p>This Vegan Red Pepper Pantry Pasta Is Easy on a Weeknight!</p>
@@ -22,8 +22,8 @@
     <div class="col s12 m6">
         <div class="card small">
             <div class="card-image">
-                <img
-                    src="https://assets.epicurious.com/photos/57ab9c1034bdab443b9af0d3/16:9/w_1600%2Cc_limit/california-veggie-sandwich-ba-081016.jpg">
+                <img src="https://assets.epicurious.com/photos/57ab9c1034bdab443b9af0d3/16:9/w_1600%2Cc_limit/california-veggie-sandwich-ba-081016.jpg"
+                    alt="image">
             </div>
             <div class="card-content">
                 <p>83 Picnic Food Ideas for 2021!</p>
@@ -63,7 +63,7 @@
 <div class="row">
     {% for recipe in recipes %}
     <div class="col s12 m6 l4">
-        <div class="card" id="cards">
+        <div class="card">
             <div class="card-image waves-effect waves-block waves-light" id="recipe-image">
                 <img src="{{ recipe.file }}" class="responsive-img activator" id="card-image"
                     alt="{{ recipe.recipe_title }}" />
@@ -119,22 +119,27 @@
     <a class="carousel-item"
         href="https://www.kitchenknives.co.uk/knives/boning-knives/masahiro-15cm-utility-boning-knife/"
         target="_blank"><img
-            src="https://www.kitchenknives.co.uk/media/catalog/product/cache/1/small_image/330x/9df78eab33525d08d6e5fb8d27136e95/m/a/masahiro-paring-knife-9cm-26894_hires_1_2.jpg"></a>
+            src="https://www.kitchenknives.co.uk/media/catalog/product/cache/1/small_image/330x/9df78eab33525d08d6e5fb8d27136e95/m/a/masahiro-paring-knife-9cm-26894_hires_1_2.jpg"
+            alt="knives"></a>
     <a class="carousel-item"
         href="https://www.kitchenknives.co.uk/knives/nakiri-knives/wusthof-classic-17cm-nakiri-wt1040132617/"
         target="_blank"><img
-            src="https://www.kitchenknives.co.uk/media/catalog/product/cache/1/small_image/330x/9df78eab33525d08d6e5fb8d27136e95/1/0/1040132617.png"></a>
+            src="https://www.kitchenknives.co.uk/media/catalog/product/cache/1/small_image/330x/9df78eab33525d08d6e5fb8d27136e95/1/0/1040132617.png"
+            alt="knives"></a>
     <a class="carousel-item" href="https://www.kitchenknives.co.uk/knives/cleavers/wusthof-gourmet-meat-cleaver-16cm/"
         target="_blank"><img
-            src="https://www.kitchenknives.co.uk/media/catalog/product/cache/1/small_image/330x/9df78eab33525d08d6e5fb8d27136e95/4/6/4685-16.jpg"></a>
+            src="https://www.kitchenknives.co.uk/media/catalog/product/cache/1/small_image/330x/9df78eab33525d08d6e5fb8d27136e95/4/6/4685-16.jpg"
+            alt="knives"></a>
     <a class="carousel-item"
         href="https://www.kitchenknives.co.uk/knives/santoku-knives/kai-shun-premier-kai-tdm-1727-santoku-knife-5-5/"
         target="_blank"><img
-            src="https://www.kitchenknives.co.uk/media/catalog/product/cache/1/small_image/330x/9df78eab33525d08d6e5fb8d27136e95/t/d/tdm-1727.png"></a>
+            src="https://www.kitchenknives.co.uk/media/catalog/product/cache/1/small_image/330x/9df78eab33525d08d6e5fb8d27136e95/t/d/tdm-1727.png"
+            alt="knives"></a>
     <a class="carousel-item"
         href="https://www.kitchenknives.co.uk/knives/utility-knives/global-sai-saim02-15cm-utility-knife-sai-m02/"
         target="_blank"><img
-            src="https://www.kitchenknives.co.uk/media/catalog/product/cache/1/small_image/330x/9df78eab33525d08d6e5fb8d27136e95/S/A/SAI-M02.png"></a>
+            src="https://www.kitchenknives.co.uk/media/catalog/product/cache/1/small_image/330x/9df78eab33525d08d6e5fb8d27136e95/S/A/SAI-M02.png"
+            alt="knives"></a>
 </div>
 
 {% endblock %}
