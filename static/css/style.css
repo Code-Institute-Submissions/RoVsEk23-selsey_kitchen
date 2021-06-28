@@ -25,11 +25,6 @@ nav .brand-logo {
     line-height: 42px;
 }
 
-.modal {
-    width: 35% !important;
-    height: 15% !important;
-}
-
 .carousel .carousel-item {
     width: 300px !important;
 }
@@ -41,7 +36,7 @@ nav .brand-logo {
 }
 
 .responsive-img {
-    height: 200px !important;
+    height: 220px !important;
 }
 
 .card .card-content {
@@ -63,7 +58,6 @@ nav .brand-logo {
 
     .modal {
         width: 50% !important;
-        height: 18% !important;
     }
 }
 
