@@ -64,9 +64,8 @@
     {% for recipe in recipes %}
     <div class="col s12 m6 l4">
         <div class="card">
-            <div class="card-image waves-effect waves-block waves-light" id="recipe-image">
-                <img src="{{ recipe.file }}" class="responsive-img activator" id="card-image"
-                    alt="{{ recipe.recipe_title }}" />
+            <div class="card-image waves-effect waves-block waves-light">
+                <img src="{{ recipe.file }}" class="responsive-img activator" alt="{{ recipe.recipe_title }}" />
             </div>
             <!--Card Content -->
             <div class="card-content activator">

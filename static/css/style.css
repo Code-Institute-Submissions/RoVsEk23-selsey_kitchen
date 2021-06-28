@@ -34,14 +34,14 @@ nav .brand-logo {
     width: 300px !important;
 }
 
-#recipe-image {
-    width: 100%;
+.card-image {
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
-#card-image {
-    height: 200px;
+.responsive-img {
+    height: 200px !important;
 }
 
 .card .card-content {
