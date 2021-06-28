@@ -53,6 +53,10 @@ def search():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if session.get("user"):
+        # check if user can access register page from session
+        return render_template("404.html")
+
     if request.method == "POST":
         # check if username already exists in db
         existing_user = mongo.db.users.find_one(
@@ -79,6 +83,10 @@ def register():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    if session.get("user"):
+        # check if user can access login page from session
+        return render_template("404.html")
+
     if request.method == "POST":
         # check if username exists in db
         existing_user = mongo.db.users.find_one(
