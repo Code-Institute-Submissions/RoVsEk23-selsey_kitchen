@@ -134,7 +134,10 @@ def dashboard(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     recipes = list(mongo.db.recipes.find())
-    return render_template("dashboard.html", username=username, recipes=recipes)
+    return render_template(
+        "dashboard.html",
+        username=username,
+        recipes=recipes)
 
 
 # ---------ADD RECIPES--------  #
@@ -198,7 +201,8 @@ def upload_file_to_s3(file):
         return e
 
     # return "{}{}".format(S3_LOCATION, file.filename)
-    return "https://{}.s3.amazonaws.com/{}".format(S3_BUCKET_NAME, file.filename)
+    return "https://{}.s3.amazonaws.com/{}".format(
+        S3_BUCKET_NAME, file.filename)
 
 
 # ---------UPDATE RECIPES--------  #
@@ -221,7 +225,8 @@ def update_recipe(recipe_id):
         }
         current_key = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
         # print(f"current key is {current_key}")
-        if current_key['file'][:4] == 'http' and submit['file'].find('placeholder.png') != -1:
+        if current_key['file'][:4] == 'http' and submit['file'].find(
+                'placeholder.png') != -1:
             submit['file'] = current_key['file']
         # print(f"rohit's log:{submit}")
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
