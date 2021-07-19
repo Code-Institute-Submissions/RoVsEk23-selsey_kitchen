@@ -60,6 +60,13 @@ Gitpod, GIT, GitHub, Materialize, MongoDB, Flask, Jinja, Heroku, Werkzeug, AWS S
 `Testing -`
 Chrome DevTools, W3C Markup Validator, W3C CSS Validator, PEP8, JShint
 
+### DATABASE ARCHITECTURE - 
+
+The project comprises of three collections in MongoDB as shown below.
+
+<img src="screenshots/database_schema.PNG" width="500"> 
+
+
 ### LAYOUT -
 
 #### 1. DESKTOP
@@ -159,9 +166,13 @@ B. CSS VALIDATION
 
 <img src="screenshots/CSS_validator.PNG" width="1000"> 
 
+B. Jshint VALIDATION
+
+<img src="screenshots/jshint.PNG" width="500"> 
+
 C. PEP8
 
-<img src="screenshots/PEP8_python_validator.PNG" width="1000"> 
+<img src="screenshots/PEP8.PNG" width="1000"> 
 
 
 #### 2. RESPONSIVE - 
