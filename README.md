@@ -291,45 +291,44 @@ Make a local clone using the following steps.
 
 2. Click on the button named “Code” for the dropdown menu.
 
-3. Click on “Open with GitHub Desktop” and follow instructions in the GitHub Desktop Application. Alternatively you can follow the instructions from this **[link] (https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository#cloning-a-repository-to-github-desktop)** to find other ways to clone a repository.
+3. Click on “Open with GitHub Desktop” and follow instructions in the GitHub Desktop Application. Alternatively you can follow the instructions from this **[link](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository#cloning-a-repository-to-github-desktop)** to find other ways to clone a repository.
 
 4. Next steps
 
-A. Install requirements: From the workspace of your local copy type: pip3 install -r requirements.txt in the IDE terminal. 
+        A. Install requirements: From the workspace of your local copy type: pip3 install -r requirements.txt in the IDE terminal. 
 
-B. Create a database in MongoDB  
+        B. Create a database in MongoDB  
 
-    - Signup and login to your MongoDB account.
-    - Create a cluster and a database.
-    - Create three collections in the db: **categories, recipes and users.**
-    - Add string values for the collections. 
+            - Signup and login to your MongoDB account.
+            - Create a cluster and a database.
+            - Create three collections in the db: **categories, recipes and users.**
+            - Add string values for the collections. 
 
-C. Create an S3 bucket on AWS
+        C. Create an S3 bucket on AWS
 
-    - Signup and login to your AWS account.
-    - Create an Amazon S3 bucket as a storage location to hold image files.
-    - Choose region closest to your geographic location
-    - You can leave all settings as default
-    - Choose Create bucket  
-    - You can refer to the following **[documentation] (https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html)** to help setup your AWS S3 services.
+            - Signup and login to your AWS account.
+            - Create an Amazon S3 bucket as a storage location to hold image files.
+            - Choose region closest to your geographic location
+            - You can leave all settings as default
+            - Choose Create bucket  
+        You can refer to the following **[documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html)** to help setup your AWS S3 services.
 
+        D. Create the environment variables 
 
-D. Create the environment variables 
-
-    - Create a .gitignore file in the root directory of the project.
-    - Add the env.py file to .gitignore.
-    - Create env.py to contain all the envornment variables.
-        
-    import os
-    os.environ["IP"] = "To be added"
-    os.environ["PORT"] = "To be added"
-    os.environ["SECRET_KEY"] = "To be added"
-    os.environ["MONGO_URI"] = "To be added"
-    os.environ["MONGO_DBNAME"] = "To be added"
-    os.environ["S3_BUCKET_NAME"] = "To be added"
-    os.environ["S3_KEY"] = "To be added"
-    os.environ["S3_SECRET"] = "To be added"
-    os.environ["S3_LOCATION"] = "To be added"
+            - Create a .gitignore file in the root directory of the project.
+            - Add the env.py file to .gitignore.
+            - Create env.py to contain all the envornment variables.
+                
+            import os
+            os.environ["IP"] = "To be added"
+            os.environ["PORT"] = "To be added"
+            os.environ["SECRET_KEY"] = "To be added"
+            os.environ["MONGO_URI"] = "To be added"
+            os.environ["MONGO_DBNAME"] = "To be added"
+            os.environ["S3_BUCKET_NAME"] = "To be added"
+            os.environ["S3_KEY"] = "To be added"
+            os.environ["S3_SECRET"] = "To be added"
+            os.environ["S3_LOCATION"] = "To be added"
 
 
 4. Run the app: From the terminal of your IDE. Type python3 app.py to run the app.
@@ -351,7 +350,7 @@ DEPLOYMENT IN HEROKU
     - Go to **Config Vars** in the settings app in Heroku. Click on **Reveal Config Vars**.
     - Enter the data contained in your env.py file.     
 
-        **["IP"] ["PORT"] ["SECRET_KEY"] ["MONGO_URI"] ["MONGO_DBNAME"] ["S3_BUCKET_NAME"] ["S3_KEY"] ["S3_SECRET"] ["S3_LOCATION"]** 
+        ["IP"] ["PORT"] ["SECRET_KEY"] ["MONGO_URI"] ["MONGO_DBNAME"] ["S3_BUCKET_NAME"] ["S3_KEY"] ["S3_SECRET"] ["S3_LOCATION"]
 
 4. Push the requirements.txt and Procfile to repository from the terminal. 
 
@@ -406,9 +405,9 @@ RECIPES:
 
 #### B.  INTERNAL RESOURCES
 
-Code Institute- Task Manager mini project for a lot of the site functionality
+    Code Institute- Task Manager mini project for a lot of the site functionality
 
-Code Institute mentor and tutor support
+    Code Institute mentor, Precious and tutor support, Igor whose guidance has been invaluable.
 
 
 
