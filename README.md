@@ -160,19 +160,29 @@ The project comprises of three collections in MongoDB as shown below.
 
 A. HTML VALIDATION
 
-1. Parsing errors on all pages built with jinja templating.
+Parsing errors on all pages built with jinja templating.
+
+<img src="screenshots/html_validator.PNG" width="500">
+<img src="screenshots/html_validator_dashboard.PNG" width="500">
+<img src="screenshots/html_validator_add_recipe.PNG" width="500">
+<img src="screenshots/html_validator_delete_recipe.PNG" width="500">
+<img src="screenshots/html_validator_get_categories.PNG" width="500">
+<img src="screenshots/html_validator_login.PNG" width="500">
+<img src="screenshots/html_validator_register.PNG" width="500">
+<img src="screenshots/html_validator_update_recipe.PNG" width="500">
+
 
 B. CSS VALIDATION
 
-<img src="screenshots/CSS_validator.PNG" width="1000"> 
+<img src="screenshots/CSS_validator.PNG" width="500"> 
 
 B. Jshint VALIDATION
 
-<img src="screenshots/jshint.PNG" width="500"> 
+<img src="screenshots/jshint.PNG" width="1000"> 
 
 C. PEP8
 
-<img src="screenshots/PEP8.PNG" width="1000"> 
+<img src="screenshots/PEP8.PNG" width="500"> 
 
 
 #### 2. RESPONSIVE - 
