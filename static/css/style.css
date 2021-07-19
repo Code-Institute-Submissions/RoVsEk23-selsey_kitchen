@@ -49,6 +49,10 @@ nav .brand-logo {
     display: inline-block;
 }
 
+.page-footer {
+    padding-top: 0px !important;
+}
+
 /*----------------------- MEDIA QUERIES */
 
 @media screen and (max-width: 640px) {

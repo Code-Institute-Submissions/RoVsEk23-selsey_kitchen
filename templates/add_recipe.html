@@ -5,7 +5,7 @@
 <h4 class="grey-text text-darken-2 center-align">ADD RECIPE</h4>
 
 <!-- Add recipes -->
-<div class="row card-panel grey lighten-5">
+<div class="row card-panel brown lighten-5">
     <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}" enctype="multipart/form-data">
         <!-- recipe category -->
         <div class="row">
@@ -32,7 +32,7 @@
         <!-- recipe ingredients -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
+                <i class="fas fa-list prefix light-grey-text text-darken-4"></i>
                 <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="20" maxlength="2000"
                     class="materialize-textarea validate" required></textarea>
                 <label for="recipe_ingredients">INGREDIENTS</label>
@@ -43,7 +43,7 @@
         <!-- recipe description -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
+                <i class="fas fa-align-justify prefix light-grey-text text-darken-4"></i>
                 <textarea id="recipe_description" name="recipe_description" minlength="20" maxlength="2000"
                     class="materialize-textarea validate" required></textarea>
                 <label for="recipe_description">DESCRIPTION</label>
@@ -54,11 +54,10 @@
         <!-- recipe image -->
         <div class="row">
             <div class="file-field input-field col s12">
-                <div class="btn grey darken-1">
+                <div class="btn brown darken-2">
                     <i class="fas fa-file-upload white-text"></i>
                     <input type="file" name="file" id="file" />
-                    <label for="file" class="white-text" style=" line-height: inherit;">Choose Image (1600 X
-                        900)</label>
+                    <label for="file" class="white-text" style=" line-height: inherit;">Choose Image</label>
                 </div>
                 <div class="file-path-wrapper">
                     <input class="file-path validate" type="text" placeholder="Upload an Image" />
