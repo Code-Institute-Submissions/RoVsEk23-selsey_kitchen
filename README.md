@@ -283,67 +283,88 @@ Requirements -
 6. AWS SDK - Boto3
 7. AWS S3
 
-Steps - 
+Clone the project - 
 
-1. Install requirements: pip install -r requirements.txt.
+Make a local clone using the following steps.
 
-2. Create cluster and database in MongoDB
+1. Create a Github account, log in go to the repository.
 
-3. Create the collections in the db: categories, recipes, users.
+2. Click on the button named “Code” for the dropdown menu.
 
-4. Create an AWS account and configure bucket to upload images.
+3. Click on “Open with GitHub Desktop” and follow instructions in the GitHub Desktop Application. Alternatively you can follow the instructions from this **[link] (https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository#cloning-a-repository-to-github-desktop)** to find other ways to clone a repository.
 
-5. Create environment variables file env.py
+4. Next steps
 
-6. Create .gitignore file
+A. Install requirements: From the workspace of your local copy type: pip3 install -r requirements.txt in the IDE terminal. 
 
-7. Add env.py file in .gitignore.
+B. Create a database in MongoDB  
 
-8. Env.py code as follows  
+    - Signup and login to your MongoDB account.
+    - Create a cluster and a database.
+    - Create three collections in the db: **categories, recipes and users.**
+    - Add string values for the collections. 
 
-import os
+C. Create an S3 bucket on AWS
 
-os.environ["IP"] = "enter"
+    - Signup and login to your AWS account.
+    - Create an Amazon S3 bucket as a storage location to hold image files.
+    - Choose region closest to your geographic location
+    - You can leave all settings as default
+    - Choose Create bucket  
+    - You can refer to the following **[documentation] (https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/s3.html)** to help setup your AWS S3 services.
 
-os.environ["PORT"] = "enter"
 
-os.environ["SECRET_KEY"] = "enter"
+D. Create the environment variables 
 
-os.environ["MONGO_URI"] = "enter"
-    
-os.environ["MONGO_DBNAME"] = "enter"
+    - Create a .gitignore file in the root directory of the project.
+    - Add the env.py file to .gitignore.
+    - Create env.py to contain all the envornment variables.
+        
+    import os
+    os.environ["IP"] = "To be added"
+    os.environ["PORT"] = "To be added"
+    os.environ["SECRET_KEY"] = "To be added"
+    os.environ["MONGO_URI"] = "To be added"
+    os.environ["MONGO_DBNAME"] = "To be added"
+    os.environ["S3_BUCKET_NAME"] = "To be added"
+    os.environ["S3_KEY"] = "To be added"
+    os.environ["S3_SECRET"] = "To be added"
+    os.environ["S3_LOCATION"] = "To be added"
 
-os.environ["S3_BUCKET_NAME"] = "enter"
 
-os.environ["S3_KEY"] = "enter"
-
-os.environ["S3_SECRET"] = "enter"
-
-os.environ["S3_LOCATION"] = "enter"
-
-RUN: Type python3 app.py from the terminal window to run the app.
+4. Run the app: From the terminal of your IDE. Type python3 app.py to run the app.
 
 DEPLOYMENT IN HEROKU
 
-1. Set up Heroku account with deployment method as Github. Enter pip3 freeze -- local > requirements.txt in Girpod then python app.py > Procfile.
+1. Set up your local workspace for Heroku 
 
-2. Set up local workspace for Heroku
+    - In the terminal window of your IDE type: **pip3 freeze -- local > requirements.txt.** (So Heroku can read the file to be installed.)
+    - In termial window of your IDE type: **python app.py > Procfile** (So Heroku can read the file to be used on entry)
 
-3. Gitpod/IDE command: pip3 freeze -- local > requirements.txt and : python app.py > Procfile 
+2. Set up Heroku 
+    Create a Heroku account, create a new app and select region. 
 
-4. Connect to GitHub section in the deploy tab in Heroku. Push requirements.txt and Procfile to Github repository.
+3. Deployment method 'Github'
 
-5. Search your repository to connect to Heroku
+    - Click on the **Connect to GitHub** section in the deploy tab in Heroku. 
+    - Identify your repository to **connect** your reposiry to Heroku.
+    - Go to **Config Vars** in the settings app in Heroku. Click on **Reveal Config Vars**.
+    - Enter the data contained in your env.py file.     
 
-6. Set up Config Vars in Heroku
+        **["IP"] ["PORT"] ["SECRET_KEY"] ["MONGO_URI"] ["MONGO_DBNAME"] ["S3_BUCKET_NAME"] ["S3_KEY"] ["S3_SECRET"] ["S3_LOCATION"]** 
 
-7. Enter env.py variables 
+4. Push the requirements.txt and Procfile to repository from the terminal. 
 
-8. Push the requirements.txt and Procfile to Github
+        $ git add requirements.txt
+        $ git commit -m "Add requirements.txt"
+        $ git add Procfile 
+        $ git commit -m "Add Procfile"
 
-9. Set up automatic deployment in Heroku. Enable Automatic Deploys. Deploy Branch.
+5. Deployment: Go to the deploy tab in Heroku and scroll down to **Automatic deployments**. Click on **Enable Automatic Deploys**. 
 
-10. Heroku will receive the code from Github and host the app 
+Heroku will connect to Github and host the app. 
+
+Click on **Open app** in the right corner of your Heroku account. The app wil open and the live link is available from the address bar. 
 
 http://rk-selsey-kitchen.herokuapp.com/
 
