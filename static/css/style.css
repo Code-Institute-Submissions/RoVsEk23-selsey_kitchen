@@ -1,3 +1,12 @@
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 165px;
+}
+
 nav .brand-logo {
     margin-left: 20px;
     font-size: 40px;
@@ -51,6 +60,13 @@ nav .brand-logo {
 
 .page-footer {
     padding-top: 0px !important;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 165px;
 }
 
 /*----------------------- MEDIA QUERIES */
