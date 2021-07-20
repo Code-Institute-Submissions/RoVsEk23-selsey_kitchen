@@ -1,3 +1,7 @@
+html {
+    font-family: sans-serif;
+}
+
 #page-container {
     position: relative;
     min-height: 100vh;

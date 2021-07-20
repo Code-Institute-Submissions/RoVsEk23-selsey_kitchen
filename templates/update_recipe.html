@@ -5,7 +5,7 @@
 <h4 class="grey-text text-darken-2 center-align">UPDATE RECIPE</h4>
 
 <!-- Update recipes -->
-<div class="row card-panel grey lighten-5">
+<div class="row card-panel brown lighten-5">
     <form class="col s12" method="POST" action="{{ url_for('update_recipe', recipe_id=recipe._id) }}"
         enctype="multipart/form-data">
         <!-- recipe category -->
@@ -38,7 +38,7 @@
         <!-- recipe ingredients -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
+                <i class="fas fa-list prefix light-grey-text text-darken-4"></i>
                 <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="20" maxlength="2000"
                     class="materialize-textarea validate" required>
                     {{- recipe.recipe_ingredients -}}
@@ -49,7 +49,7 @@
         <!-- recipe description -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-align-left prefix light-grey-text text-darken-4"></i>
+                <i class="fas fa-align-justify prefix light-grey-text text-darken-4"></i>
                 <textarea id="recipe_description" name="recipe_description" minlength="20" maxlength="2000"
                     class="materialize-textarea validate" required>
                     {{- recipe.recipe_description -}}
@@ -64,7 +64,7 @@
                     <i class="fas fa-file-upload white-text"></i>
                     <input type="file" name="file" id="update_image" />
                     <label for="update_image" class="white-text" style="line-height: inherit;"
-                        value="{{ recipe.file }}">Choose Image (1600 X 900)</label>
+                        value="{{ recipe.file }}">Choose Image</label>
                 </div>
                 <div class="file-path-wrapper">
                     <input class="file-path validate" type="text" value="{{ recipe.file }}" />
