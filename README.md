@@ -115,6 +115,7 @@ The project comprises of three collections in MongoDB as shown below.
 
 5. The footer has links to social media and my personal Github page.
 
+
 ##### PAGES - 
 
 1. Header and footer remains the same throughout the site.
@@ -128,6 +129,24 @@ The project comprises of three collections in MongoDB as shown below.
 5. The add and update recipe forms are almost identical. The user has the option of not uploading an image to the recipe on the first time entry. A placeholder image will be used initially. But the user must upload an image if the intend to update the recipe. This functionality helps the user to update a recipe quickly even if they dont have an image handy to upload. But to maintain full access to the recipe they must upload an image.
 
 6. The admin has a manage categories page available where categories can be added, edited, or deleted.
+
+##### SECURITY FEATURES -
+
+1. An unregistered user has access to view all recipes and images on the recipe page including with the user id associated with each recipe.
+
+2. In order to have access to a recipe dashboard, with the functionality to add, update and delete recipes, a user needs to register and log in. 
+
+3. Defensive programming 
+
+    A. The user cannot access the login and register page when they are within a user session.
+    
+    B. Session urls cannot be accessed from a seperate browser. Flash messages display the relevant status.
+
+    C. Delete confirmation button added to delete a record.
+
+5. The site does not allow for the duplication of user ids.
+
+6. Flash messages added when the user performs any action. (Register, login, add recipe, update recipe, delete recipe, logout)
 
 ##### BUGS - 
 
